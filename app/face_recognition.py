@@ -3,9 +3,9 @@ import sklearn
 import pickle
 import cv2
 import os
-haar=cv2.CascadeClassifier(r'C:\Users\DELL\Facerecognitionproject\FaceRecognition_Flask-main\4_Flask_App\model\haarcascade_frontalface_default.xml')
-model_svm=pickle.load(open(r'C:\Users\DELL\Facerecognitionproject\FaceRecognition_Flask-main\4_Flask_App\model\model_svm.pickle',mode='rb'))
-pca_models=pickle.load(open(r'C:\Users\DELL\Facerecognitionproject\FaceRecognition_Flask-main\4_Flask_App\model\pca_dict.pickle',mode='rb'))
+haar=cv2.CascadeClassifier('./model/haarcascade_frontalface_default.xml')
+model_svm=pickle.load(open('./model/model_svm.pickle',mode='rb'))
+pca_models=pickle.load(open('./model/pca_dict.pickle',mode='rb'))
 model_pca=pca_models['pca']
 mean_face_arr=pca_models['mean_face']
 
